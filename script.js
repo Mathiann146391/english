@@ -1,4 +1,4 @@
-// Liste de mots en français et leurs traductions en anglais
+// Liste étendue de mots en français et leurs traductions en anglais
 const words = [
     { french: 'Bonjour', english: 'Hello' },
     { french: 'Chat', english: 'Cat' },
@@ -7,7 +7,20 @@ const words = [
     { french: 'Livre', english: 'Book' },
     { french: 'Voiture', english: 'Car' },
     { french: 'Arbre', english: 'Tree' },
-    { french: 'Fleur', english: 'Flower' }
+    { french: 'Fleur', english: 'Flower' },
+    { french: 'École', english: 'School' },
+    { french: 'Fenêtre', english: 'Window' },
+    { french: 'Ordinateur', english: 'Computer' },
+    { french: 'Soleil', english: 'Sun' },
+    { french: 'Lune', english: 'Moon' },
+    { french: 'Mer', english: 'Sea' },
+    { french: 'Montagne', english: 'Mountain' },
+    { french: 'Papier', english: 'Paper' },
+    { french: 'Téléphone', english: 'Phone' },
+    { french: 'Vélo', english: 'Bicycle' },
+    { french: 'Fête', english: 'Party' },
+    { french: 'Plage', english: 'Beach' },
+    { french: 'Rien', english: 'Nothing' }
 ];
 
 // Sélectionner les éléments du DOM
@@ -29,22 +42,20 @@ function displayRandomWord() {
     englishWordElement.textContent = word.english;
 }
 
-// Fonction pour gérer le retour de la carte
+// Fonction pour faire tourner la carte
 function flipCardHandler() {
-    // Ajout d'une classe pour gérer la rotation
     flipCard.querySelector('.card-inner').classList.toggle('flipped');
 }
 
 // Initialisation de la carte avec un mot aléatoire
 displayRandomWord();
 
-// Ajout d'un événement de clic et de toucher pour faire tourner la carte
+// Ajouter un événement de clic ou de tap pour retourner la carte
 flipCard.addEventListener('click', flipCardHandler);
 flipCard.addEventListener('touchstart', flipCardHandler, { passive: true });
 
-// Ajout de l'événement de clic pour afficher un nouveau mot
+// Ajouter un événement pour afficher un nouveau mot au clic du bouton
 newWordBtn.addEventListener('click', () => {
     displayRandomWord();
-    // Réinitialiser la carte après avoir affiché un nouveau mot
-    flipCard.querySelector('.card-inner').classList.remove('flipped');
+    flipCard.querySelector('.card-inner').classList.remove('flipped'); // Réinitialiser la carte
 });
