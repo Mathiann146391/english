@@ -29,10 +29,22 @@ function displayRandomWord() {
     englishWordElement.textContent = word.english;
 }
 
+// Fonction pour gérer le retour de la carte
+function flipCardHandler() {
+    // Ajout d'une classe pour gérer la rotation
+    flipCard.querySelector('.card-inner').classList.toggle('flipped');
+}
+
 // Initialisation de la carte avec un mot aléatoire
 displayRandomWord();
+
+// Ajout d'un événement de clic et de toucher pour faire tourner la carte
+flipCard.addEventListener('click', flipCardHandler);
+flipCard.addEventListener('touchstart', flipCardHandler, { passive: true });
 
 // Ajout de l'événement de clic pour afficher un nouveau mot
 newWordBtn.addEventListener('click', () => {
     displayRandomWord();
+    // Réinitialiser la carte après avoir affiché un nouveau mot
+    flipCard.querySelector('.card-inner').classList.remove('flipped');
 });
