@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeu de Vocabulaire</title>
+    <title>Apprentissage de l'anglais</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <div class="card" id="flip-card">
-            <div class="card-inner">
-                <div class="card-front" id="french-word">Cliquez pour un mot</div>
-                <div class="card-back" id="english-word"></div>
-            </div>
-        </div>
-        <button id="new-word-btn">Nouveau mot</button>
+    <div class="buttons">
+        <button class="button" id="allButton">All</button>
+        <button class="button" id="weekButton">Semaine</button>
     </div>
+    <div class="card-container">
+        <div class="card" id="card">
+            <div class="card-content front" id="front">Cliquez pour commencer</div>
+            <div class="card-content back" id="back"></div>
+        </div>
+    </div>
+    <button class="button" id="nextButton">Changer le mot</button>
 
     <script src="script.js"></script>
 </body>
