@@ -156,8 +156,36 @@ function getRandomWord() {
 
 function showWord() {
     currentWord = getRandomWord();
-    front.textContent = currentWord.fr;
-    back.textContent = currentWord.en;
+    const frenchText = formatText(currentWord.fr);
+    const englishText = formatText(currentWord.en);
+
+    front.innerHTML = frenchText;
+    back.innerHTML = englishText;
+}
+
+function formatText(text) {
+    const span = document.createElement("span");
+    span.textContent = text;
+
+    const container = document.createElement("div");
+    container.appendChild(span);
+
+    document.body.appendChild(container);
+    container.style.display = "inline-block";
+    span.style.display = "inline-block";
+    container.style.visibility = "hidden";
+
+    let fontSize = parseInt(window.getComputedStyle(span).fontSize, 10);
+
+    while (span.scrollWidth > container.offsetWidth || span.scrollHeight > container.offsetHeight) {
+        fontSize--;
+        span.style.fontSize = `${fontSize}px`;
+    }
+
+    span.className = fontSize < 20 ? "scaled" : "";
+    document.body.removeChild(container);
+
+    return span.outerHTML;
 }
 
 function flipToFrenchThenChangeWord() {
@@ -194,5 +222,8 @@ card.addEventListener("touchstart", (event) => {
     event.preventDefault();
     flipCard();
 }); // Support tactile
+
+document.addEventListener("DOMContentLoaded", showWord);
+
 
 document.addEventListener("DOMContentLoaded", showWord);
