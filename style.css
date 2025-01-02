@@ -1,3 +1,30 @@
+/* Fichier HTML */
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprentissage de l'anglais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="buttons">
+        <button class="button" id="allButton">All</button>
+        <button class="button" id="weekButton">Semaine</button>
+    </div>
+    <div class="card-container">
+        <div class="card" id="card">
+            <div class="card-content front" id="front">Cliquez pour commencer</div>
+            <div class="card-content back" id="back"></div>
+        </div>
+    </div>
+    <button class="button" id="nextButton">Changer le mot</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* Fichier CSS : style.css */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -53,11 +80,15 @@ body {
     border: 2px solid black;
     border-radius: 10px;
     background-color: white;
-    font-size: calc(5% + 1.5vh); /* Taille du texte adaptée à l'image */
+    font-size: calc(2vw + 2vh); /* Taille dynamique pour les textes */
+    max-font-size: 24px;
     color: black;
     text-align: center;
     padding: 5px;
     box-sizing: border-box;
+    overflow: hidden; /* Empêche le débordement du texte */
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .card-content.back {
@@ -76,7 +107,8 @@ body {
     }
 
     .card-content {
-        font-size: calc(6% + 2vh); /* Taille du texte ajustée */
+        font-size: calc(3vw + 3vh); /* Taille augmentée pour mobile */
+        max-font-size: 28px; /* Empêche que le texte soit trop grand */
     }
 
     .button {
