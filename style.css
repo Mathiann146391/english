@@ -1,30 +1,3 @@
-/* Fichier HTML */
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apprentissage de l'anglais</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="buttons">
-        <button class="button" id="allButton">All</button>
-        <button class="button" id="weekButton">Semaine</button>
-    </div>
-    <div class="card-container">
-        <div class="card" id="card">
-            <div class="card-content front" id="front">Cliquez pour commencer</div>
-            <div class="card-content back" id="back"></div>
-        </div>
-    </div>
-    <button class="button" id="nextButton">Changer le mot</button>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-/* Fichier CSS : style.css */
 body {
     font-family: Arial, sans-serif;
     display: flex;
