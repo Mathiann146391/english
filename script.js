@@ -166,25 +166,6 @@ function showWord() {
 function formatText(text) {
     const span = document.createElement("span");
     span.textContent = text;
-
-    const container = document.createElement("div");
-    container.appendChild(span);
-
-    document.body.appendChild(container);
-    container.style.display = "inline-block";
-    span.style.display = "inline-block";
-    container.style.visibility = "hidden";
-
-    let fontSize = parseInt(window.getComputedStyle(span).fontSize, 10);
-
-    while (span.scrollWidth > container.offsetWidth || span.scrollHeight > container.offsetHeight) {
-        fontSize--;
-        span.style.fontSize = `${fontSize}px`;
-    }
-
-    span.className = fontSize < 20 ? "scaled" : "";
-    document.body.removeChild(container);
-
     return span.outerHTML;
 }
 
