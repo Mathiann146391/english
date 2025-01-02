@@ -53,15 +53,21 @@ body {
     border: 2px solid black;
     border-radius: 10px;
     background-color: white;
-    font-size: calc(2vw + 2vh); /* Taille dynamique pour les textes */
-    max-font-size: 24px;
     color: black;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     box-sizing: border-box;
-    overflow: hidden; /* Empêche le débordement du texte */
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    line-height: 1.2;
+}
+
+.card-content span {
+    display: block;
+    font-size: calc(2vw + 1vh);
+    word-break: break-word;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .card-content.back {
@@ -80,8 +86,7 @@ body {
     }
 
     .card-content {
-        font-size: calc(3vw + 3vh); /* Taille augmentée pour mobile */
-        max-font-size: 28px; /* Empêche que le texte soit trop grand */
+        font-size: calc(3vw + 2vh);
     }
 
     .button {
