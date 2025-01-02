@@ -128,21 +128,6 @@ const words = {
     ]
 };
 
-const words = {
-    all: [
-        { fr: "chat", en: "cat" },
-        { fr: "chien", en: "dog" },
-        { fr: "pomme", en: "apple" },
-        { fr: "maison", en: "house" }
-    ],
-    semaine: [
-        { fr: "lundi", en: "Monday" },
-        { fr: "mardi", en: "Tuesday" },
-        { fr: "mercredi", en: "Wednesday" },
-        { fr: "jeudi", en: "Thursday" }
-    ]
-};
-
 let currentCategory = "all";
 let usedWords = [];
 let currentWord = null;
@@ -189,6 +174,11 @@ function adjustTextSize(element) {
         fontSize--;
         span.style.fontSize = fontSize + "px";
     }
+
+    if (span.scrollHeight > parent.clientHeight || span.scrollWidth > parent.clientWidth) {
+        span.style.whiteSpace = "pre-wrap";
+        span.style.wordBreak = "break-word";
+    }
 }
 
 function flipToFrenchThenChangeWord() {
@@ -225,9 +215,5 @@ card.addEventListener("touchstart", (event) => {
     event.preventDefault();
     flipCard();
 }); // Support tactile
-
-document.addEventListener("DOMContentLoaded", showWord);
-
-
 
 document.addEventListener("DOMContentLoaded", showWord);
