@@ -128,6 +128,21 @@ const words = {
     ]
 };
 
+const words = {
+    all: [
+        { fr: "chat", en: "cat" },
+        { fr: "chien", en: "dog" },
+        { fr: "pomme", en: "apple" },
+        { fr: "maison", en: "house" }
+    ],
+    semaine: [
+        { fr: "lundi", en: "Monday" },
+        { fr: "mardi", en: "Tuesday" },
+        { fr: "mercredi", en: "Wednesday" },
+        { fr: "jeudi", en: "Thursday" }
+    ]
+};
+
 let currentCategory = "all";
 let usedWords = [];
 let currentWord = null;
@@ -156,17 +171,24 @@ function getRandomWord() {
 
 function showWord() {
     currentWord = getRandomWord();
-    const frenchText = formatText(currentWord.fr);
-    const englishText = formatText(currentWord.en);
+    front.innerHTML = `<span>${currentWord.fr}</span>`;
+    back.innerHTML = `<span>${currentWord.en}</span>`;
 
-    front.innerHTML = frenchText;
-    back.innerHTML = englishText;
+    adjustTextSize(front);
+    adjustTextSize(back);
 }
 
-function formatText(text) {
-    const span = document.createElement("span");
-    span.textContent = text;
-    return span.outerHTML;
+function adjustTextSize(element) {
+    const span = element.querySelector("span");
+    const parent = element;
+
+    let fontSize = parseInt(window.getComputedStyle(parent).fontSize, 10);
+    span.style.fontSize = fontSize + "px";
+
+    while (span.scrollHeight > parent.clientHeight || span.scrollWidth > parent.clientWidth) {
+        fontSize--;
+        span.style.fontSize = fontSize + "px";
+    }
 }
 
 function flipToFrenchThenChangeWord() {
@@ -205,6 +227,7 @@ card.addEventListener("touchstart", (event) => {
 }); // Support tactile
 
 document.addEventListener("DOMContentLoaded", showWord);
+
 
 
 document.addEventListener("DOMContentLoaded", showWord);
