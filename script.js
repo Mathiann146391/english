@@ -1,8 +1,8 @@
 const words = {
     all: [
-        { fr: "abandonner", en: "abandon" },
-        { fr: "aborder", en: "approach" },
-        { fr: "accélérer", en: "accelerate" },
+        { fr: "cos(a+b)=", en: "cos(a)cos(b)-sin(a)sin(b)" },
+        { fr: "sin(a+b)=", en: "sin(a)cos(b)+cos(a)sin(b)" },
+        { fr: "tan(a+b)=", en: "tan(a)+tan(b)" },
         { fr: "accomplir", en: "accomplish" },
         { fr: "accroître", en: "increase" },
         { fr: "adapter", en: "adapt" },
