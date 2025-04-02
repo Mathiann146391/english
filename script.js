@@ -1,33 +1,32 @@
 const words = {
     all: [
-       
         { fr: 'sensibiliser un groupe de personnes', en: 'to raise awareness among + group' },
     ],
     semaine: [
         { fr: 'sensibiliser un groupe de personnes', en: 'to raise awareness among + group' },
         { fr: 'les personnes âgées', en: 'the elderly' },
-        { fr: 'encourager qqun', en: 'to urge so t do sthg' },
+        { fr: 'encourager qqun', en: 'to urge so to do sthg' },
         { fr: 'participer à qqch', en: 'to play a part in sthg' },
         { fr: 'être à la traîne', en: 'to lag/be behind' },
-        { fr: 'rattraper so retard sur qqun', en: 'to catch up with sb' },
-        { fr: 'mettre en danger', en: 'to jeopardize, to engander' },
+        { fr: 'rattraper son retard sur qqun', en: 'to catch up with sb' },
+        { fr: 'mettre en danger', en: 'to jeopardize' },
         { fr: 'des déséquilibres', en: 'imbalances' },
         { fr: 'sur le long/court terme', en: 'in the long/short term' },
         { fr: 'un contrecoup', en: 'a backlash' },
-        { fr: 'efficace', en: 'effective(cela fontionne) vs efficient(c'est rapide)' },
+        { fr: 'efficace', en: 'effective vs efficient' },
         { fr: 'laisser de côté', en: 'to overlook, to dismiss' },
-        { fr: "supprimer de façon progressive", en: 'to phase out gradually' },
+        { fr: 'supprimer de façon progressive', en: 'to phase out gradually' },
         { fr: 'to rely on', en: 'reposer sur' },
-        { fr: 'pertinent(adj)', en: 'relevant' },
+        { fr: 'pertinent', en: 'relevant' },
         { fr: 'surexploité', en: 'overused' },
-        { fr: "précipité", en: 'hasty' },
+        { fr: 'précipité', en: 'hasty' },
         { fr: 'licencier', en: 'to fire / let go' },
-        { fr: 'être bien conscient de ', en: 'to be well aware of' },
-        { fr: 'se laisser aller à +V, se permettre', en: 'to indulge in +V-ing' },
+        { fr: 'être bien conscient de', en: 'to be well aware of' },
+        { fr: 'se laisser aller à', en: 'to indulge in +V-ing' },
         { fr: 'fermer ses portes définitivement', en: 'to shut down' },
-        { fr: 'le plus récent, le dernier', en: 'the latest' },
+        { fr: 'le plus récent', en: 'the latest' },
         { fr: 'des militants', en: 'activists' },
-        { fr: 'minifester', en: 'poisson d'avril il y a pas' },
+        { fr: 'minifester', en: 'poisson d\'avril' },
     ]
 };
 
@@ -117,6 +116,6 @@ card.addEventListener("click", flipCard);
 card.addEventListener("touchstart", (event) => {
     event.preventDefault();
     flipCard();
-}); // Support tactile
+});
 
 document.addEventListener("DOMContentLoaded", showWord);
