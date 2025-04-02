@@ -24,6 +24,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e67e00;
 }
 
 .card-container {
@@ -60,7 +65,8 @@ body {
     overflow: hidden;
     word-wrap: break-word;
     line-height: 1.2;
-    font-size: 1rem; /* Par défaut */
+    font-size: 1rem;
+    transition: font-size 0.2s ease;
 }
 
 .card-content span {
@@ -78,7 +84,6 @@ body {
     transform: rotateY(180deg);
 }
 
-/* Spécifique aux appareils mobiles */
 @media only screen and (max-width: 600px) {
     .card {
         width: 90vw;
@@ -89,11 +94,8 @@ body {
         font-size: 14px;
         padding: 8px 16px;
     }
-}
 
-/* Préfixes pour assurer la compatibilité mobile */
-.card {
-    -webkit-transform-style: preserve-3d;
-    -webkit-transform: rotateY(0deg);
-    -webkit-transition: transform 0.6s;
+    .card-content {
+        font-size: 0.9rem;
+    }
 }
