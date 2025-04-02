@@ -26,7 +26,7 @@ const words = {
         { fr: 'fermer ses portes définitivement', en: 'to shut down' },
         { fr: 'le plus récent', en: 'the latest' },
         { fr: 'des militants', en: 'activists' },
-        { fr: 'minifester', en: 'poisson d\'avril' },
+        { fr: 'manifester', en: 'poisson d\'avril' },
     ]
 };
 
