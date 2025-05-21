@@ -3,34 +3,26 @@ const words = {
         { fr: 'sensibiliser un groupe de personnes', en: 'to raise awareness among + group' },
     ],
     semaine: [
-        { fr: 'sensibiliser un groupe de personnes', en: 'to raise awareness among + group' },
-        { fr: 'les personnes âgées', en: 'the elderly' },
-        { fr: 'encourager qqun', en: 'to urge so to do sthg' },
-        { fr: 'participer à qqch', en: 'to play a part in sthg' },
-        { fr: 'être à la traîne', en: 'to lag/be behind' },
-        { fr: 'rattraper son retard sur qqun', en: 'to catch up with sb' },
-        { fr: 'mettre en danger', en: 'to jeopardize' },
-        { fr: 'des déséquilibres', en: 'imbalances' },
-        { fr: 'sur le long/court terme', en: 'in the long/short term' },
-        { fr: 'un contrecoup', en: 'a backlash' },
-        { fr: 'efficace', en: 'effective vs efficient' },
-        { fr: 'laisser de côté', en: 'to overlook, to dismiss' },
-        { fr: 'supprimer de façon progressive', en: 'to phase out gradually' },
-        { fr: 'to rely on', en: 'reposer sur' },
-        { fr: 'pertinent', en: 'relevant' },
-        { fr: 'surexploité', en: 'overused' },
-        { fr: 'précipité', en: 'hasty' },
-        { fr: 'licencier', en: 'to fire / let go' },
-        { fr: 'être bien conscient de', en: 'to be well aware of' },
-        { fr: 'se laisser aller à', en: 'to indulge in +V-ing' },
-        { fr: 'fermer ses portes définitivement', en: 'to shut down' },
-        { fr: 'le plus récent', en: 'the latest' },
-        { fr: 'des militants', en: 'activists' },
-        { fr: 'manifester', en: 'poisson d\'avril' },
+        { fr: 'les défenseurs', en: 'the advocates' },
+        { fr: 'manifester', en: 'to demonstrate' },
+        { fr: 'obtenir gain de cause', en: 'to get one's way' },
+        { fr: 'occasionner des dégâts', en: 'to cause damage' },
+        { fr: 'entreprendre qqch', en: 'to undertake sthg' },
+        { fr: 'il se peut que', en: 'it may + BV' },
+        { fr: 'faciliter', en: 'to ease' },
+        { fr: 's'assurer de', en: 'to check' },
+        { fr: 'causer des ravages dans la vie de qqun', en: 'to wreak havoc in sb's life' },
+        { fr: 'la véracité', en: 'the accuracy' },
+        { fr: 'cautionner', en: 'to condone' },
+        { fr: 'cela ne plaît pas à qqun', en: 'it is not to sb's liking' },
+        { fr: 'que ce soit', en: 'be it/be they' },
+        { fr: 'la religion musulmane, catholique et juive', en: 'the Muslim, Catholic or Jewish religion' },
+        { fr: 'surexploité', en: 'pas poisson d\'avril ;) on est pas en avril' },
     ]
 };
 
-let currentCategory = "all";
+
+let currentCategory = "all"
 let usedWords = [];
 let currentWord = null;
 let isFlipped = false;
