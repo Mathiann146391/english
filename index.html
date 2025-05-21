@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="buttons">
-        <button class="button" id="allButton">Maths</button>
-        <button class="button" id="weekButton">Anglais</button>
-    </div>
-    <div class="card-container">
-        <div class="card" id="card">
-            <div class="card-content front" id="front">Cliquez pour commencer</div>
-            <div class="card-content back" id="back"></div>
-        </div>
-    </div>
-    <button class="button" id="nextButton">Changer le mot</button>
+    <main>
+        <section class="buttons" aria-label="Choix de catégorie">
+            <button class="button" id="allButton" type="button">Maths</button>
+            <button class="button" id="weekButton" type="button">Anglais</button>
+        </section>
 
-    <script src="script.js"></script>
+        <section class="card-container" aria-live="polite">
+            <div class="card" id="card" role="button" tabindex="0" aria-label="Carte de vocabulaire. Cliquez pour retourner.">
+                <div class="card-content front" id="front">Cliquez pour commencer</div>
+                <div class="card-content back" id="back" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <button class="button" id="nextButton" type="button">Changer le mot</button>
+    </main>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
